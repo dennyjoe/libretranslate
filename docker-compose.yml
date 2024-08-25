@@ -1,0 +1,16 @@
+version: "3.9"
+
+networks:
+  gateway:
+    external: true
+    name: "gateway"
+
+services:
+  libretranslate:
+    image: libretranslate/libretranslate
+    volumes:
+      - "$INSTALL_DIR/local:/home/libretranslate/.local:rw"
+    ports:
+      - "55000:5000"
+    networks:
+      - gateway
