@@ -7,7 +7,7 @@ networks:
 
 services:
   libretranslate:
-    image: libretranslate/libretranslate
+    image: nexus.lab.local:8083/libretranslate:arm64
     volumes:
       - "$INSTALL_DIR/local:/home/libretranslate/.local:rw"
     ports:
