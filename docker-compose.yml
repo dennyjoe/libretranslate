@@ -9,10 +9,7 @@ services:
   libretranslate:
     container_name: libretranslate
     image: nexus.lab.local:8083/libretranslate:arm64
-    user: "${UID}:${GID}"
     volumes:
       - "$INSTALL_DIR/local:/home/libretranslate/.local:rw"
-    ports:
-      - "55000:5000"
     networks:
       - gateway
